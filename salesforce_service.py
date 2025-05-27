@@ -12,7 +12,8 @@ SF_CLIENT_ID = os.getenv("SF_CLIENT_ID")
 SF_CLIENT_SECRET = os.getenv("SF_CLIENT_SECRET")
 SF_REDIRECT_URI = "http://localhost:8000/salesforce/auth/callback"
 TOKEN_URL = "https://login.salesforce.com/services/oauth2/token"
-TOKEN_FILE = "salesforce_tokens.json"
+TOKEN_FILE = "/home/site/wwwroot/salesforce_tokens.json"
+
 
 # Global variables
 access_token = None

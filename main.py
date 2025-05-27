@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import RedirectResponse
+from fastapi.middleware.cors import CORSMiddleware
 from zoho_service import initiate_zoho_auth, handle_zoho_callback, get_zoho_leads, create_zoho_lead
 from salesforce_service import (
     initiate_salesforce_auth, handle_salesforce_callback,
@@ -7,7 +8,13 @@ from salesforce_service import (
 )
 
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # Zoho routes
 @app.get("/zoho/auth/initiate")
 def zoho_auth():

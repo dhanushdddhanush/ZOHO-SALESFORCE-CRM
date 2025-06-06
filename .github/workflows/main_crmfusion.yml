@@ -68,4 +68,4 @@ jobs:
         with:
           app-name: 'CRMFusion'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A6EAFFC7274747E3AF31650694B3774B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1BCE83EBB355485182671EBD76E4457C }}
